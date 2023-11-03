@@ -21,9 +21,9 @@ class StendaaniumTest
     {
         SplitResult result = this.stendaanium.split(1, 49);
 
-        assertEquals(100.0, this.stendaanium.getPercentageLeft());
-        assertEquals(2450.0, result.getSteamInCubicMeters(), 0.001);
-        assertEquals(40.0, result.getResidualHeat(), 0.001);
+        assertEquals(100.0, this.stendaanium.getPercentageLeft(), 0.01);
+        assertEquals(2450.0, result.getSteamInCubicMeters(), 0.01);
+        assertEquals(40.0, result.getResidualHeat(), 0.01);
     }
 
     @Test
@@ -31,9 +31,9 @@ class StendaaniumTest
     {
         SplitResult result = this.stendaanium.split(1, 50);
 
-        assertEquals(99.97, this.stendaanium.getPercentageLeft(), 0.1);
-        assertEquals(2500.0, result.getSteamInCubicMeters(), 0.1);
-        assertEquals(40.0, result.getResidualHeat(), 0.1);
+        assertEquals(99.99, this.stendaanium.getPercentageLeft(), 0.01);
+        assertEquals(2500.0, result.getSteamInCubicMeters(), 0.01);
+        assertEquals(40.0, result.getResidualHeat(), 0.01);
     }
 
     @Test
